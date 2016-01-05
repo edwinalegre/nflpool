@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html ng-app="nflpoolApp">
+<head>
+  <title>NFL Pool</title>
+  <%= stylesheet_link_tag    'application', media: 'all' %>
+  <%= javascript_include_tag 'application' %>
+  <%= csrf_meta_tags %>
+</head>
+<body ng-controller="nflpoolController as nflpool">
+
+<%= yield %>
+{{5 + 5}}
+
+</body>
+</html>
