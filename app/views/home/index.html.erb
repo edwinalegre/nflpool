@@ -1,2 +1,155 @@
-<h1>Home#index</h1>
-<p>Find me in app/views/home/index.html.erb</p>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-8 col-md-offset-2">
+      <table class="table table-bordered">
+        <tr>
+          <td></td>
+          <td >{{nflpool.data[0].x0}}</td>
+          <td>{{nflpool.data[0].x1}}</td>
+          <td>{{nflpool.data[0].x2}}</td>
+          <td>{{nflpool.data[0].x3}}</td>
+          <td>{{nflpool.data[0].x4}}</td>
+          <td>{{nflpool.data[0].x5}}</td>
+          <td>{{nflpool.data[0].x6}}</td>
+          <td>{{nflpool.data[0].x7}}</td>
+          <td>{{nflpool.data[0].x8}}</td>
+          <td>{{nflpool.data[0].x9}}</td>
+          <td rowspan="12" class="awayteam"><h6 class="vertical-text text-uppercase"><span style="color: #{{nflpool.data[0].awaycolor1}}">{{nflpool.data[0].awaycity}}</span> <span style="color: #{{nflpool.data[0].awaycolor2}}">{{nflpool.data[0].awayteam}}</span></h6></td>
+        </tr>
+        <tr>
+          <td>{{nflpool.data[0].y0}}</td>
+          <td class="box" data-toggle="modal" data-target="#myModal">{{nflpool.boxes[0].initials}}</td>
+          <td class="box">{{nflpool.boxes[1].initials}}</td>
+          <td class="box">{{nflpool.boxes[2].initials}}</td>
+          <td class="box">{{nflpool.boxes[3].initials}}</td>
+          <td class="box">{{nflpool.boxes[4].initials}}</td>
+          <td class="box">{{nflpool.boxes[5].initials}}</td>
+          <td class="box">{{nflpool.boxes[6].initials}}</td>
+          <td class="box">{{nflpool.boxes[7].initials}}</td>
+          <td class="box">{{nflpool.boxes[8].initials}}</td>
+          <td class="box">{{nflpool.boxes[9].initials}}</td>
+        </tr>
+        <tr>
+          <td>{{nflpool.data[0].y1}}</td>
+          <td class="box"></td>
+          <td class="box"></td>
+          <td class="box"></td>
+          <td class="box"></td>
+          <td class="box"></td>
+          <td class="box"></td>
+          <td class="box"></td>
+          <td class="box"></td>
+          <td class="box"></td>
+          <td class="box"></td>
+        </tr>
+        <tr>
+          <td>{{nflpool.data[0].y2}}</td>
+          <td class="box"></td>
+          <td class="box"></td>
+          <td class="box"></td>
+          <td class="box"></td>
+          <td class="box"></td>
+          <td class="box"></td>
+          <td class="box"></td>
+          <td class="box"></td>
+          <td class="box"></td>
+          <td class="box"></td>
+        </tr>
+        <tr>
+          <td>{{nflpool.data[0].y3}}</td>
+          <td class="box"></td>
+          <td class="box"></td>
+          <td class="box"></td>
+          <td class="box"></td>
+          <td class="box"></td>
+          <td class="box"></td>
+          <td class="box"></td>
+          <td class="box"></td>
+          <td class="box"></td>
+          <td class="box"></td>
+        </tr>
+        <tr>
+          <td>{{nflpool.data[0].y4}}</td>
+          <td class="box"></td>
+          <td class="box"></td>
+          <td class="box"></td>
+          <td class="box"></td>
+          <td class="box"></td>
+          <td class="box"></td>
+          <td class="box"></td>
+          <td class="box"></td>
+          <td class="box"></td>
+          <td class="box"></td>
+        </tr>
+        <tr>
+          <td>{{nflpool.data[0].y5}}</td>
+          <td class="box"></td>
+          <td class="box"></td>
+          <td class="box"></td>
+          <td class="box"></td>
+          <td class="box"></td>
+          <td class="box"></td>
+          <td class="box"></td>
+          <td class="box"></td>
+          <td class="box"></td>
+          <td class="box"></td>
+        </tr>
+        <tr>
+          <td>{{nflpool.data[0].y6}}</td>
+          <td class="box"></td>
+          <td class="box"></td>
+          <td class="box"></td>
+          <td class="box"></td>
+          <td class="box"></td>
+          <td class="box"></td>
+          <td class="box"></td>
+          <td class="box"></td>
+          <td class="box"></td>
+          <td class="box"></td>
+        </tr>
+        <tr>
+          <td>{{nflpool.data[0].y7}}</td>
+          <td class="box"></td>
+          <td class="box"></td>
+          <td class="box"></td>
+          <td class="box"></td>
+          <td class="box"></td>
+          <td class="box"></td>
+          <td class="box"></td>
+          <td class="box"></td>
+          <td class="box"></td>
+          <td class="box"></td>
+        </tr>
+        <tr>
+          <td>{{nflpool.data[0].y8}}</td>
+          <td class="box"></td>
+          <td class="box"></td>
+          <td class="box"></td>
+          <td class="box"></td>
+          <td class="box"></td>
+          <td class="box"></td>
+          <td class="box"></td>
+          <td class="box"></td>
+          <td class="box"></td>
+          <td class="box"></td>
+        </tr>
+        <tr>
+          <td>{{nflpool.data[0].y9}}</td>
+          <td class="box"></td>
+          <td class="box"></td>
+          <td class="box"></td>
+          <td class="box"></td>
+          <td class="box"></td>
+          <td class="box"></td>
+          <td class="box"></td>
+          <td class="box"></td>
+          <td class="box"></td>
+          <td class="box"></td>
+        </tr>
+        <tr>
+          <td colspan="11" class="horizontal-text text-uppercase"><span style="color: #{{nflpool.data[0].homecolor1}}">{{nflpool.data[0].homecity}}</span> <span style="color: #{{nflpool.data[0].homecolor2}}">{{nflpool.data[0].hometeam}}</span></td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>

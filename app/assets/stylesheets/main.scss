@@ -1,3 +1,50 @@
 // Place all the styles related to the home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+$primary-color: #DDDDDD;
+$secondary-color: #FFCC00;
+
+
+    body {
+      background-color: $primary-color;
+    }
+    table {
+      background-color: #FFFFFF;
+    }
+    td {
+      height: 6vh;
+      width: 4vw;
+    }
+    h6 {
+      width: 1px;
+      line-height: 1em;
+      word-wrap: break-word;
+      font-size: 2em;
+    }
+    .horizontal-text {
+      font-size: 2em;
+      text-align: center;
+      line-height: 1em;
+      background-color: $primary-color;
+    }
+    .awayteam {
+      text-align: center;
+      vertical-align: bottom;
+      color: red;
+      background-color: $primary-color;
+    }
+    .navbar {
+      height: 100px;
+      background-image: url('http://i.huffpost.com/gen/2019348/images/o-FOOTBALL-DARK-facebook.jpg');
+      background-size: cover;
+      background-position: 0 -100px;
+    }
+    .logo1 {
+      color: $primary-color;
+      font-size: 2em;
+    }
+    .logo2 {
+      color: $secondary-color;
+      font-size: 2em;
+    }

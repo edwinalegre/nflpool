@@ -6,24 +6,124 @@ angular.module('nflpoolApp', ['ngResource'])
   .controller('nflpoolController', function nflpoolController($scope, $http, $resource){
     var nflpool = this;
 
-    var Nflpool = $resource('/api/nflpool/:id', {id:'@id'},
-        {
-          'update': { method: 'patch' }
+    // var Nflpool = $resource('/api/nflpool/:id', {id:'@id'},
+    //     {
+    //       'update': { method: 'patch' }
+    //     }
+    //   );
+
+    // Nflpool.query(function(data){
+    //   $scope.nflpool = data
+    // });
+
+    nflpool.teams = [
+      {
+        team: 'Dolphins',
+        city: 'Miami',
+        color1: 'orange',
+        color2: 'green'
+      },
+      {
+        team: '49ers',
+        city: 'San Francisco',
+        color1: 'AA0000',
+        color2: 'B3995D'
+      },
+      {
+        team: 'Giants',
+        city: 'New York',
+        color1: '0B2265',
+        color2: 'A71930'
+      }
+    ];
+
+    nflpool.boxes = [
+      {
+        poolid: 'abc123', firstname: 'fn', lastname: 'ln', initials: 'F.L.', boxnumber: '1'
+      },
+      {
+        poolid: 'abc123', firstname: 'fn', lastname: 'ln', initials: 'F.L.', boxnumber: '2'
+      },
+      {
+        poolid: 'abc123', firstname: 'fn', lastname: 'ln', initials: 'F.L.', boxnumber: '3'
+      },
+      {
+        poolid: 'abc123', firstname: 'fn', lastname: 'ln', initials: 'F.L.', boxnumber: '4'
+      },
+      {
+        poolid: 'abc123', firstname: 'fn', lastname: 'ln', initials: 'F.L.', boxnumber: '5'
+      },
+      {
+        poolid: 'abc123', firstname: 'fn', lastname: 'ln', initials: 'F.L.', boxnumber: '6'
+      },
+      {
+        poolid: 'abc123', firstname: 'fn', lastname: 'ln', initials: 'F.L.', boxnumber: '7'
+      },
+      {
+        poolid: 'abc123', firstname: 'fn', lastname: 'ln', initials: 'F.L.', boxnumber: '8'
+      },
+      {
+        poolid: 'abc123', firstname: 'fn', lastname: 'ln', initials: 'F.L.', boxnumber: '9'
+      },
+      {
+        poolid: 'abc123', firstname: 'fn', lastname: 'ln', initials: 'F.L.', boxnumber: '10'
+      }
+    ];
+
+    nflpool.data = [
+      {
+        id: 'abc123',
+        name: 'Name',
+        email: 'name1@name.com',
+        passcode: 'nfl2016',
+        hometeam: 'Giants',
+        homecity: '',
+        homecolor1: '',
+        homecolor2: '',
+        awayteam: '49ers',
+        awaycity: '',
+        awaycolor1: '',
+        awaycolor2: '',
+        x0: '0',
+        x1: '1',
+        x2: '2',
+        x3: '3',
+        x4: '4',
+        x5: '5',
+        x6: '6',
+        x7: '7',
+        x8: '8',
+        x9: '9',
+        y0: '0',
+        y1: '1',
+        y2: '2',
+        y3: '3',
+        y4: '4',
+        y5: '5',
+        y6: '6',
+        y7: '7',
+        y8: '8',
+        y9: '9'
+      }
+    ];
+
+    var afunction = function(){
+      for (var i = 0; i < nflpool.teams.length; i++){
+        if (nflpool.data[0].hometeam == nflpool.teams[i].team){
+          nflpool.data[0].homecity = nflpool.teams[i].city;
+          nflpool.data[0].homecolor1 = nflpool.teams[i].color1;
+          nflpool.data[0].homecolor2 = nflpool.teams[i].color2;
         }
-      );
-
-    Nflpool.query(function(data){
-      $scope.nflpool = data
-    });
-
-
-
-    // sports.list = [
-    //   {firstname: 'Noah', lastname: 'Alegre', photo: 'https://saladly-ea-wdi.s3.amazonaws.com/uploads/sportster/profile_image/54c6bb943237620003020000/small_10340013_10203196155317128_1571200417375562606_n.jpg', division: 'Minors I', team: 'Warriors', year: 2014, sport: 'Basketball'},
-    //   {firstname: 'Leila', lastname: 'Alegre', photo: 'https://saladly-ea-wdi.s3.amazonaws.com/uploads/sportster/profile_image/54c6bb943237620003020000/small_10340013_10203196155317128_1571200417375562606_n.jpg', division: 'PeeWee', team: 'Dodgers', year: 2013, sport: 'Baseball'},
-    //   {firstname: 'Shawn', lastname: 'Bautista', photo: 'https://saladly-ea-wdi.s3.amazonaws.com/uploads/sportster/profile_image/54c6bb943237620003020000/small_10340013_10203196155317128_1571200417375562606_n.jpg', division: 'Minors II', team: 'Spain', year: 2013, sport: 'Soccer'},
-    //   {firstname: 'Angeli', lastname: 'Jugao', photo: 'https://saladly-ea-wdi.s3.amazonaws.com/uploads/sportster/profile_image/54c6bb943237620003020000/small_10340013_10203196155317128_1571200417375562606_n.jpg', division: 'PeeWee', team: 'AC Milan', year: 2014, sport: 'Soccer'},
-    //   {firstname: 'Alyssa', lastname: 'Jugao', photo: 'https://saladly-ea-wdi.s3.amazonaws.com/uploads/sportster/profile_image/54c6bb943237620003020000/small_10340013_10203196155317128_1571200417375562606_n.jpg', division: 'Girls', team: 'Lakers', year: 2015, sport: 'Basketball'},
-    // ];
+      }
+      for (var i = 0; i < nflpool.teams.length; i++){
+        if (nflpool.data[0].awayteam == nflpool.teams[i].team){
+          nflpool.data[0].awaycity = nflpool.teams[i].city;
+          nflpool.data[0].awaycolor1 = nflpool.teams[i].color1;
+          nflpool.data[0].awaycolor2 = nflpool.teams[i].color2;
+        }
+      }
+      console.log(nflpool.data[0]);
+    }
+    afunction();      
 
   });
