@@ -20,8 +20,8 @@ angular.module('nflpoolApp', ['ngResource'])
       {
         team: 'Dolphins',
         city: 'Miami',
-        color1: 'orange',
-        color2: 'green'
+        color1: 'CCCC00',
+        color2: 'CCFF00'
       },
       {
         team: '49ers',
@@ -67,6 +67,36 @@ angular.module('nflpoolApp', ['ngResource'])
       },
       {
         poolid: 'abc123', firstname: 'dsa', lastname: 'asd', initials: '', boxid: '9'
+      },
+      {
+        poolid: 'abc123', firstname: 'fn', lastname: 'ln', initials: '', boxid: '10'
+      },
+      {
+        poolid: 'abc123', firstname: 'sdf', lastname: 'sdf', initials: '', boxid: '11'
+      },
+      {
+        poolid: 'abc123', firstname: 'qweqwe', lastname: 'werwer', initials: '', boxid: '12'
+      },
+      {
+        poolid: 'abc123', firstname: 'zxcv', lastname: 'zxcv', initials: '', boxid: '13'
+      },
+      {
+        poolid: 'abc123', firstname: 'tyrty', lastname: 'rtyty', initials: '', boxid: '14'
+      },
+      {
+        poolid: 'abc123', firstname: 'erty', lastname: 'erty', initials: '', boxid: '15'
+      },
+      {
+        poolid: 'abc123', firstname: 'ghjk', lastname: 'hgjk', initials: '', boxid: '16'
+      },
+      {
+        poolid: 'abc123', firstname: 'bbbb', lastname: 'bbbbb', initials: '', boxid: '17'
+      },
+      {
+        poolid: 'abc123', firstname: 'hggff', lastname: 'hggff', initials: '', boxid: '18'
+      },
+      {
+        poolid: 'abc123', firstname: 'dsa', lastname: 'asd', initials: '', boxid: '19'
       }
     ];
 
@@ -80,19 +110,19 @@ angular.module('nflpoolApp', ['ngResource'])
         homecity: '',
         homecolor1: '',
         homecolor2: '',
-        awayteam: '49ers',
+        awayteam: 'Dolphins',
         awaycity: '',
         awaycolor1: '',
         awaycolor2: '',
-        x0: '0',
-        x1: '1',
-        x2: '2',
-        x3: '3',
-        x4: '4',
-        x5: '5',
-        x6: '6',
-        x7: '7',
-        x8: '8',
+        x0: '2',
+        x1: '4',
+        x2: '1',
+        x3: '8',
+        x4: '0',
+        x5: '3',
+        x6: '9',
+        x7: '6',
+        x8: '5',
         x9: '9',
         y0: '0',
         y1: '1',
@@ -144,6 +174,7 @@ angular.module('nflpoolApp', ['ngResource'])
       boxid = Number(boxid);
       $('.modal-title').text(nflpool.data[0].homecity + " vs " + nflpool.data[0].awaycity);
       $('.modal-body').text(nflpool.boxes[boxid].firstname + " " + nflpool.boxes[boxid].lastname);
+      console.log(nflpool.boxes[boxid])
     });
   });
 
