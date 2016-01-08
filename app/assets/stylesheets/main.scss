@@ -21,24 +21,34 @@ $secondary-color: #FFCC00;
       line-height: 1em;
       word-wrap: break-word;
       font-size: 2em;
+      margin-top: 40px;
     }
-    .horizontal-text {
+    .box-headers {
+      background-color: $primary-color;
+      font-size: 1.6em;
+    }
+    .home-title {
       font-size: 2em;
       text-align: center;
       line-height: 1em;
       background-color: $primary-color;
     }
-    .awayteam {
+    .away-title {
       text-align: center;
       vertical-align: bottom;
       color: red;
       background-color: $primary-color;
     }
     .navbar {
-      height: 100px;
+      height: 115px;
       background-image: url('http://i.huffpost.com/gen/2019348/images/o-FOOTBALL-DARK-facebook.jpg');
       background-size: cover;
       background-position: 0 -100px;
+      border-bottom: 15px solid #FFCC00;
+      margin-bottom: 0;
+    }
+    .navbar-brand {
+      padding: 35px;
     }
     .logo1 {
       color: $primary-color;
@@ -47,4 +57,32 @@ $secondary-color: #FFCC00;
     .logo2 {
       color: $secondary-color;
       font-size: 2em;
+    }
+    table tr td {
+      text-align: center;
+    }
+    .box{
+      text-transform: uppercase;
+    }
+
+    @media screen and (max-width:1200px) {
+      .navbar {
+        background-position: 0 -75px;
+      }
+    }
+
+    @media screen and (max-width:900px) {
+      .navbar {
+        background-position: 0 -50px;
+      }
+    }
+
+    @media screen and (max-width:600px) {
+      .navbar {
+        background-position: 0 -25px;
+      }
+      .box-headers {
+        background-color: $primary-color;
+        font-size: 1em;
+      }
     }
