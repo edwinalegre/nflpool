@@ -21,19 +21,22 @@ angular.module('poolApp', ['ngResource'])
         team: 'Dolphins',
         city: 'Miami',
         color1: 'CCCC00',
-        color2: 'CCFF00'
+        color2: 'CCFF00',
+        helmet: '-85px -180px'
       },
       {
         team: '49ers',
         city: 'San Francisco',
         color1: 'AA0000',
-        color2: 'B3995D'
+        color2: 'B3995D',
+        helmet: '210px 380px'
       },
       {
         team: 'Giants',
         city: 'New York',
         color1: '0B2265',
-        color2: 'A71930'
+        color2: 'A71930',
+        helmet: '0 -270px'
       }
     ];
 
@@ -110,10 +113,12 @@ angular.module('poolApp', ['ngResource'])
         homecity: '',
         homecolor1: '',
         homecolor2: '',
+        homehelmet: '',
         awayteam: 'Dolphins',
         awaycity: '',
         awaycolor1: '',
         awaycolor2: '',
+        awayhelmet: '',
         x0: '2',
         x1: '4',
         x2: '1',
@@ -143,6 +148,7 @@ angular.module('poolApp', ['ngResource'])
           pool.data[0].homecity = pool.teams[i].city;
           pool.data[0].homecolor1 = pool.teams[i].color1;
           pool.data[0].homecolor2 = pool.teams[i].color2;
+          pool.data[0].homehelmet = pool.teams[i].helmet;
         }
       }
       for (var i = 0; i < pool.teams.length; i++){
@@ -150,6 +156,7 @@ angular.module('poolApp', ['ngResource'])
           pool.data[0].awaycity = pool.teams[i].city;
           pool.data[0].awaycolor1 = pool.teams[i].color1;
           pool.data[0].awaycolor2 = pool.teams[i].color2;
+          pool.data[0].awayhelmet = pool.teams[i].helmet;
         }
       }
     }
@@ -173,7 +180,9 @@ angular.module('poolApp', ['ngResource'])
       var boxid = $(this).attr('data-info');
       boxid = Number(boxid);
       $('.modal-title').text(pool.data[0].homecity + " vs " + pool.data[0].awaycity);
-      $('.modal-body').text(pool.boxes[boxid].firstname + " " + pool.boxes[boxid].lastname);
+      $('.home-helmets').css('background-position', pool.data[0].homehelmet);
+      $('.away-helmets').css('background-position', pool.data[0].awayhelmet);
+      $('.modal-text').text(pool.boxes[boxid].firstname + " " + pool.boxes[boxid].lastname);
       console.log(pool.boxes[boxid])
     });
   });

@@ -76,20 +76,18 @@ $secondary-color: #FFCC00;
     .box{
       text-transform: uppercase;
     }
-    #myModalLabel {
-      text-align: center;
-    }
     .modal-content {
-      background-image: url('http://totalsportscomplex.com/wp-content/uploads/2014/09/Football-big-thumb.jpg');
-      background-size: cover;
     }
     .modal-header {
-      background-color: $primary-color;
-      opacity: 0.9;
+      background-image: url('http://totalsportscomplex.com/wp-content/uploads/2014/09/Football-big-thumb.jpg');
+      background-size: cover;
+      // background-color: $primary-color;
+      // opacity: 0.9;
       border-bottom: 4px solid $secondary-color;
     }
     .modal-title {
-      color: #000000;
+      text-align: center;
+      color: #FFFFFF;
       font-size: 1.8em;
     }
     .close {
@@ -97,11 +95,30 @@ $secondary-color: #FFCC00;
       opacity: 0.6;
       font-size: 24px;
     }
-    .modal-body {
-      color: #FFFFFF;
-    }
     .modal-footer {
       border-top: 0;
+    }
+    .home-helmets {
+      background-image: url(http://www.embroiderydesigns4you.com/images/NFL%20Helmets.jpg);
+      width: 85px;
+      height: 85px;
+      top: 75px;
+      left: 100px;
+      position: absolute;
+    }
+    .away-helmets {
+      background-image: url(http://www.embroiderydesigns4you.com/images/NFL%20Helmets.jpg);
+      width: 85px;
+      height: 85px;
+      top: 75px;
+      right: 100px;
+      position: absolute;
+    }
+    .modal-text {
+      color: #000000;
+      text-align: center;
+      height: 75px;
+      font-size: 1.6em;
     }
 
     @media screen and (max-width:1400px) {
