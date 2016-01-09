@@ -82,6 +82,12 @@ $secondary-color: #FFCC00;
     .modal-content {
       background-image: url('http://static1.squarespace.com/static/52f1cd78e4b00ca7b803d300/t/52f1dd65e4b0c7721b600ec6/1391582566237/football_620x350.jpg');
     }
+    .modal-title {
+      color: $secondary-color;
+    }
+    .modal-body {
+      color: #FFFFFF;
+    }
 
     @media screen and (max-width:1400px) {
       .navbar {
