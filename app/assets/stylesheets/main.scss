@@ -80,13 +80,28 @@ $secondary-color: #FFCC00;
       text-align: center;
     }
     .modal-content {
-      background-image: url('http://static1.squarespace.com/static/52f1cd78e4b00ca7b803d300/t/52f1dd65e4b0c7721b600ec6/1391582566237/football_620x350.jpg');
+      background-image: url('http://totalsportscomplex.com/wp-content/uploads/2014/09/Football-big-thumb.jpg');
+      background-size: cover;
+    }
+    .modal-header {
+      background-color: $primary-color;
+      opacity: 0.9;
+      border-bottom: 4px solid $secondary-color;
     }
     .modal-title {
-      color: $secondary-color;
+      color: #000000;
+      font-size: 1.8em;
+    }
+    .close {
+      line-height: 1;
+      opacity: 0.6;
+      font-size: 24px;
     }
     .modal-body {
       color: #FFFFFF;
+    }
+    .modal-footer {
+      border-top: 0;
     }
 
     @media screen and (max-width:1400px) {
