@@ -40,15 +40,14 @@ $secondary-color: #FFCC00;
       background-color: $primary-color;
     }
     .navbar {
-      height: 115px;
+      height: 125px;
       background-image: url('http://i.huffpost.com/gen/2019348/images/o-FOOTBALL-DARK-facebook.jpg');
       background-size: cover;
       background-position: 0 -100px;
-      border-bottom: 15px solid #FFCC00;
       margin-bottom: 0;
     }
     .navbar-brand {
-      padding: 35px;
+      padding: 50px;
     }
     .logo1 {
       color: $primary-color;
@@ -58,6 +57,19 @@ $secondary-color: #FFCC00;
       color: $secondary-color;
       font-size: 2em;
     }
+    .nav {
+      background-color: $secondary-color;
+      text-align: center;
+      padding: 0;
+    }
+    .nav ul li {
+      display: inline;
+      margin-left: 20px;
+      margin-right: 20px;
+    }
+    .nav ul {
+      margin: 3px 0;
+    }
     table tr td {
       text-align: center;
     }
@@ -65,24 +77,30 @@ $secondary-color: #FFCC00;
       text-transform: uppercase;
     }
 
-    @media screen and (max-width:1200px) {
+    @media screen and (max-width:1400px) {
       .navbar {
         background-position: 0 -75px;
       }
     }
 
-    @media screen and (max-width:900px) {
+    @media screen and (max-width:1024px) {
       .navbar {
         background-position: 0 -50px;
       }
     }
 
-    @media screen and (max-width:600px) {
+    @media screen and (max-width:640px) {
       .navbar {
         background-position: 0 -25px;
       }
       .box-headers {
         background-color: $primary-color;
         font-size: 1em;
+      }
+      .box{
+        font-size: 0.65em;
+      }
+      h6, .home-title {
+        font-size: 1.5em;
       }
     }

@@ -1,10 +1,10 @@
 Rails.application.routes.draw do
 
   root 'home#index'
-  resources :nflpool
+  resources :pool
 
   namespace :api do
-    resources :nflpool
+    resources :pool
   end
 
 

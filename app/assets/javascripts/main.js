@@ -1,22 +1,22 @@
-angular.module('nflpoolApp', ['ngResource'])
+angular.module('poolApp', ['ngResource'])
   .config(function($httpProvider) {
     $httpProvider.defaults.headers.common['X-CSRF-Token'] =
       $('meta[name=csrf-token]').attr('content');
   })
-  .controller('nflpoolController', function nflpoolController($scope, $http, $resource){
-    var nflpool = this;
+  .controller('poolController', function poolController($scope, $http, $resource){
+    var pool = this;
 
-    // var Nflpool = $resource('/api/nflpool/:id', {id:'@id'},
+    // var Pool = $resource('/api/pool/:id', {id:'@id'},
     //     {
     //       'update': { method: 'patch' }
     //     }
     //   );
 
-    // Nflpool.query(function(data){
-    //   $scope.nflpool = data
+    // Pool.query(function(data){
+    //   $scope.pool = data
     // });
 
-    nflpool.teams = [
+    pool.teams = [
       {
         team: 'Dolphins',
         city: 'Miami',
@@ -37,7 +37,7 @@ angular.module('nflpoolApp', ['ngResource'])
       }
     ];
 
-    nflpool.boxes = [
+    pool.boxes = [
       {
         poolid: 'abc123', firstname: 'fn', lastname: 'ln', initials: '', boxid: '0'
       },
@@ -100,7 +100,7 @@ angular.module('nflpoolApp', ['ngResource'])
       }
     ];
 
-    nflpool.data = [
+    pool.data = [
       {
         id: 'abc123',
         name: 'Name',
@@ -138,26 +138,26 @@ angular.module('nflpoolApp', ['ngResource'])
     ];
 
     var setTeams = function(){
-      for (var i = 0; i < nflpool.teams.length; i++){
-        if (nflpool.data[0].hometeam == nflpool.teams[i].team){
-          nflpool.data[0].homecity = nflpool.teams[i].city;
-          nflpool.data[0].homecolor1 = nflpool.teams[i].color1;
-          nflpool.data[0].homecolor2 = nflpool.teams[i].color2;
+      for (var i = 0; i < pool.teams.length; i++){
+        if (pool.data[0].hometeam == pool.teams[i].team){
+          pool.data[0].homecity = pool.teams[i].city;
+          pool.data[0].homecolor1 = pool.teams[i].color1;
+          pool.data[0].homecolor2 = pool.teams[i].color2;
         }
       }
-      for (var i = 0; i < nflpool.teams.length; i++){
-        if (nflpool.data[0].awayteam == nflpool.teams[i].team){
-          nflpool.data[0].awaycity = nflpool.teams[i].city;
-          nflpool.data[0].awaycolor1 = nflpool.teams[i].color1;
-          nflpool.data[0].awaycolor2 = nflpool.teams[i].color2;
+      for (var i = 0; i < pool.teams.length; i++){
+        if (pool.data[0].awayteam == pool.teams[i].team){
+          pool.data[0].awaycity = pool.teams[i].city;
+          pool.data[0].awaycolor1 = pool.teams[i].color1;
+          pool.data[0].awaycolor2 = pool.teams[i].color2;
         }
       }
     }
     setTeams();
 
     var setInitials = function(){
-      for (var i = 0; i < nflpool.boxes.length; i++){
-        nflpool.boxes[i].initials = (nflpool.boxes[i].firstname).charAt(0) + "." + (nflpool.boxes[i].lastname).charAt(0) + ".";
+      for (var i = 0; i < pool.boxes.length; i++){
+        pool.boxes[i].initials = (pool.boxes[i].firstname).charAt(0) + "." + (pool.boxes[i].lastname).charAt(0) + ".";
       }
     }
     setInitials();
@@ -172,9 +172,9 @@ angular.module('nflpoolApp', ['ngResource'])
     $('.box').click(function(){
       var boxid = $(this).attr('data-info');
       boxid = Number(boxid);
-      $('.modal-title').text(nflpool.data[0].homecity + " vs " + nflpool.data[0].awaycity);
-      $('.modal-body').text(nflpool.boxes[boxid].firstname + " " + nflpool.boxes[boxid].lastname);
-      console.log(nflpool.boxes[boxid])
+      $('.modal-title').text(pool.data[0].homecity + " vs " + pool.data[0].awaycity);
+      $('.modal-body').text(pool.boxes[boxid].firstname + " " + pool.boxes[boxid].lastname);
+      console.log(pool.boxes[boxid])
     });
   });
 

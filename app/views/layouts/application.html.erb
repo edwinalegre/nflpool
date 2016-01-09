@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app="nflpoolApp">
+<html ng-app="poolApp">
 <head>
   <title>NFL Pool</title>
   <%= stylesheet_link_tag    'application', media: 'all' %>
@@ -9,7 +9,7 @@
   <style>
   </style>
 </head>
-<body ng-controller="nflpoolController as nflpool">
+<body ng-controller="poolController as pool">
 
 
 <nav class="navbar navbar-default navbar-static">
@@ -33,6 +33,13 @@
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
+  <div class="nav">
+    <ul>
+      <li>Rules</li>
+      <li>Prizes</li>
+      <li>Contact</li>
+    </ul>
+  </div>
 <%= yield %>
 
 <!-- Modal -->
