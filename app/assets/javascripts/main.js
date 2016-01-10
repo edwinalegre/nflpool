@@ -29,7 +29,7 @@ angular.module('poolApp', ['ngResource'])
         city: 'San Francisco',
         color1: 'AA0000',
         color2: 'B3995D',
-        helmet: '210px 380px'
+        helmet: '-360px -180px'
       },
       {
         team: 'Giants',
@@ -114,21 +114,21 @@ angular.module('poolApp', ['ngResource'])
         homecolor1: '',
         homecolor2: '',
         homehelmet: '',
-        awayteam: 'Dolphins',
+        awayteam: '49ers',
         awaycity: '',
         awaycolor1: '',
         awaycolor2: '',
         awayhelmet: '',
-        x0: '2',
-        x1: '4',
-        x2: '1',
-        x3: '8',
-        x4: '0',
-        x5: '3',
+        x0: '1',
+        x1: '2',
+        x2: '3',
+        x3: '4',
+        x4: '5',
+        x5: '6',
         x6: '9',
         x7: '6',
         x8: '5',
-        x9: '9',
+        x9: '7',
         y0: '0',
         y1: '1',
         y2: '2',
@@ -177,12 +177,15 @@ angular.module('poolApp', ['ngResource'])
     });
 
     $('.box').click(function(){
+      var xbox = $(this).attr('data-x');
+      var ybox =  $(this).attr('data-y');
       var boxid = $(this).attr('data-info');
       boxid = Number(boxid);
       $('.modal-title').text(pool.data[0].homecity + " vs " + pool.data[0].awaycity);
       $('.home-helmets').css('background-position', pool.data[0].homehelmet);
       $('.away-helmets').css('background-position', pool.data[0].awayhelmet);
       $('.modal-text').text(pool.boxes[boxid].firstname + " " + pool.boxes[boxid].lastname);
+      $('.modal-xy').text(xbox + " - " + ybox);
       console.log(pool.boxes[boxid])
     });
   });
