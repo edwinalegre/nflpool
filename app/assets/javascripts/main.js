@@ -12,6 +12,7 @@ angular.module('poolApp', ['ngResource'])
 
     var pools = $resource('/api/pools/:id', {id:'@id'});
 
+
     boxes.query(function(data){
       $scope.boxes = data;
     });

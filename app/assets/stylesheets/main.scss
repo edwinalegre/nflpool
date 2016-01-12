@@ -8,9 +8,14 @@ $secondary-color: #FFCC00;
 
     body {
       background-color: $primary-color;
+      background-image: url('/assets/field.jpg');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-color: #000000;
     }
     table {
       background-color: #FFFFFF;
+      box-shadow: 4px 4px 15px #000000;
     }
     td {
       height: 6vh;
@@ -22,6 +27,7 @@ $secondary-color: #FFCC00;
       word-wrap: break-word;
       font-size: 2em;
       margin-top: 40px;
+      text-shadow: 1px 1px #FFFFFF;
     }
     .box-headers {
       background-color: $primary-color;
@@ -32,12 +38,14 @@ $secondary-color: #FFCC00;
       text-align: center;
       line-height: 1em;
       background-color: $primary-color;
+      text-shadow: 1px 1px #FFFFFF;
     }
     .away-title {
       text-align: center;
       vertical-align: bottom;
       color: red;
       background-color: $primary-color;
+      min-width: 28px;
     }
     .navbar {
       height: 125px;
@@ -46,8 +54,11 @@ $secondary-color: #FFCC00;
       background-position: 0 -100px;
       margin-bottom: 0;
     }
+    .navbar-header {
+      width: 100%;
+    }
     .navbar-brand {
-      padding: 50px;
+      padding: 50px 0 50px 45px;
     }
     .logo1 {
       color: $primary-color;
@@ -57,10 +68,20 @@ $secondary-color: #FFCC00;
       color: $secondary-color;
       font-size: 2em;
     }
+    .trophy {
+      background-image: url('/assets/logo.jpg');
+      background-size: cover;
+      width: 100px;
+      height: 100px;
+      padding: 0;
+      margin: 10px 0 0 0;
+      float: right;
+    }
     .nav {
       background-color: $secondary-color;
       text-align: center;
       padding: 0;
+      margin-bottom: 20px;
     }
     .nav ul li {
       display: inline;
