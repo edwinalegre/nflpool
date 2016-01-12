@@ -1,10 +1,14 @@
 Rails.application.routes.draw do
 
   root 'home#index'
-  resources :pool
+  resources :pools
+  resources :teams
+  resources :boxes
 
   namespace :api do
-    resources :pool
+    resources :pools
+    resources :teams
+    resources :boxes
   end
 
 
