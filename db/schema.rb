@@ -25,16 +25,6 @@ ActiveRecord::Schema.define(version: 20160112061155) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "games", force: :cascade do |t|
-    t.string   "name"
-    t.string   "email"
-    t.string   "passcode"
-    t.string   "hometeam"
-    t.string   "awayteam"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "pools", force: :cascade do |t|
     t.string   "name"
     t.string   "email"

@@ -3,7 +3,7 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 $primary-color: #DDDDDD;
-$secondary-color: #FFCC00;
+$secondary-color: #FFD700;
 
 
     body {
@@ -27,7 +27,7 @@ $secondary-color: #FFCC00;
       word-wrap: break-word;
       font-size: 2em;
       margin-top: 40px;
-      text-shadow: 1px 1px #FFFFFF;
+      text-shadow: 1px 1px #999;
     }
     .box-headers {
       background-color: $primary-color;
@@ -38,7 +38,7 @@ $secondary-color: #FFCC00;
       text-align: center;
       line-height: 1em;
       background-color: $primary-color;
-      text-shadow: 1px 1px #FFFFFF;
+      text-shadow: 1px 1px #999;
     }
     .away-title {
       text-align: center;
