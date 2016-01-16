@@ -4,7 +4,7 @@ module Api
 
     def index
       boxes = Box.all
-      render json: boxes, only: [:firstname, :lastname, :initials, :boxid]
+      render json: boxes, only: [:id, :firstname, :lastname, :initials, :boxid, :poolid]
     end
   end
 end
