@@ -13,7 +13,11 @@ angular.module('poolApp', ['ngResource'])
     var pools = $resource('/api/pools/:id', {id:'@id'});
 
     boxes.query(function(data){
-      $scope.boxes = data;
+
+      $scope.boxes = data.sort(function(a, b){
+          return a.id - b.id;
+      });
+      
     });
 
     pools.query(function(data){
@@ -37,9 +41,11 @@ angular.module('poolApp', ['ngResource'])
         var xbox = $(this).attr('data-x');
         var ybox =  $(this).attr('data-y');
         var boxid = $(this).attr('data-info');
+        console.log(xbox);
         boxid = Number(boxid);
-
-
+        $('.modal-title').text($scope.pools[0].homecity + " vs " + $scope.pools[0].awaycity);
+        $('.home-helmets').css('background-position', $scope.pools[0].homehelmet);
+        $('.away-helmets').css('background-position', $scope.pools[0].awayhelmet);
         $('.modal-text').text($scope.boxes[boxid].firstname + " " + $scope.boxes[boxid].lastname);
         $('.modal-xy').text(xbox + " - " + ybox);
       });

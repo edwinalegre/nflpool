@@ -34,6 +34,7 @@ $secondary-color: #FFD700;
       font-size: 1.6em;
     }
     .home-title {
+      font-family: monospace;
       font-size: 2em;
       text-align: center;
       line-height: 1em;
@@ -41,6 +42,7 @@ $secondary-color: #FFD700;
       text-shadow: 1px 1px #999;
     }
     .away-title {
+      font-family: monospace;
       text-align: center;
       vertical-align: bottom;
       color: red;
@@ -85,8 +87,8 @@ $secondary-color: #FFD700;
     }
     .nav ul li {
       display: inline;
-      margin-left: 20px;
-      margin-right: 20px;
+      margin-left: 10px;
+      margin-right: 10px;
     }
     .nav ul {
       margin: 3px 0;
