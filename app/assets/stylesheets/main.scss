@@ -70,6 +70,10 @@ $secondary-color: #FFD700;
       color: $secondary-color;
       font-size: 2em;
     }
+    .location{
+      font-size: 0.7em;
+      color: #FFFFFF;
+    }
     .trophy {
       background-image: url('/assets/logo.jpg');
       background-size: cover;
@@ -147,6 +151,9 @@ $secondary-color: #FFD700;
       text-align: center;
       height: 35px;
       font-size: 1.2em;
+    }
+    th{
+      text-align: center;
     }
 
     @media screen and (max-width:1400px) {

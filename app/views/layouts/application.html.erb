@@ -17,14 +17,17 @@
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
       <div class="trophy"></div>
-      <a class="navbar-brand" href="/"><span class="logo1">NFL</span><span class="logo2">02.07.16</span></a>
+      <a class="navbar-brand" href="/"><span class="logo1">NFL</span><span class="logo2">02.07.16</span>
+      <div class="location">LEVI STADIUM - SANTA CLARA, CA</div></a>
+
     </div>
+
   </div><!-- /.container-fluid -->
 </nav>
   <div class="nav">
     <ul>
-      <li>Rules</li>
-      <li>Payout</li>
+      <li><a href="#" data-toggle="modal" data-target="#rules">Rules</a></li>
+      <li><a href="#" data-toggle="modal" data-target="#payout">Payout</a></li>
       <li>Contact</li>
     </ul>
   </div>
@@ -50,6 +53,79 @@
     </div>
   </div>
 </div>
+
+<div class="modal fade" id="payout" tabindex="-1" role="dialog" aria-labelledby="payoutLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="payoutLabel">Payout</h4>
+      </div>
+      <div class="modal-body">
+        <ul>
+          <li>$150 First Quarter</li>
+          <li>$300 Half Time</li>
+          <li>$150 Third Quarter</li>
+          <li>$400 Final Score</li>
+        </ul>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="modal fade" id="rules" tabindex="-1" role="dialog" aria-labelledby="rulesLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="rulesLabel">Rules</h4>
+      </div>
+      <div class="modal-body">
+
+        <p><strong>What is a hundred squares football pool?</strong><br>
+        It's a form of gambling, usually organized by a group of coworkers in an office or by someone in a bar or restaurant.</p>
+
+        <p><strong>How much does it usually cost to play?</strong><br>
+        The cost varies from pool to pool.  Most office pools will cost between 1 and 10 dollars per square.</p>
+
+        <p><strong>Do I have to know anything about football?</strong><br>
+        No.  Since the numbers are randomly drawn, everyone has the same opportunity to get any set of numbers.  You don't need to know anything about football, just watch for the score at the end of each quarter of the game.</p>
+
+        <p><strong>I bought a square - why didn't I receive any numbers?</strong><br>
+        You won't receive your numbers until all 100 squares have been sold.  Then, the operator of the pool will randomly pick numbers (0-9) and place them on the x and y axis of the grid.  After the numbers have been drawn, the pool will be posted for all to see, or you may be given a Xeroxed copy of it.</p>
+
+        <p><strong>I have a copy of the pool with numbers.  How do I know what my numbers are?</strong><br>
+        There will be a team name on the top (or bottom) and a team name on the side. Look for your name on the grid and follow across and up to see your numbers.</p>
+
+        <p>At the end of each quarter, you will observe the score of the game.  Only look at the LAST digit of each team's score.  This will determine the winner.</p>
+
+        <p>For example:  Let's say you're watching Buffalo vs. Miami.  At the end of the first quarter, it's Buffalo 10, Miami 7.  The person who has Buffalo-0, Miami-7 will be the winner.</p>
+
+        <p><strong>What's a touching square?</strong><br>
+
+        A touching square is located directly above, below, right, or left of the winning square.  In some pools, touching squares will win a small prize.  In other pools, touching squares do not win anything.</p>
+
+        <p><strong>What if the game goes into overtime?</strong><br>
+
+        The rules will vary from pool to pool.  Typically, when a game goes into overtime, you would NOT have a winner for the 4th quarter.  Instead, the FINAL score will be the last winner of the pool.  Since specific rules may vary, double check with the pool organizer before the game.</p>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
 
 </body>
 </html>

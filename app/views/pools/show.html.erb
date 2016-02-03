@@ -15,7 +15,7 @@
           <td class="box-headers"><%= @pool.x7 %></td>
           <td class="box-headers"><%= @pool.x8 %></td>
           <td class="box-headers"><%= @pool.x9 %></td>
-          <td rowspan="12" class="away-title"><h6 class="text-uppercase"><span style="color: #<%= @pool.awaycolor1 %>"><%= @pool.awaycity%></span> <span style="color: #<%= @pool.awaycolor2 %>"><%= @pool.awayteam %></span></h6></td>
+          <td class="box-headers"></td>
         </tr>
         <tr>
           <td class="box-headers"><%= @pool.y0 %></td>
@@ -29,6 +29,7 @@
           <td class="box" data-toggle="modal" data-target="#details" data-x="<%= @pool.x7 %>" data-y="<%= @pool.y0 %>" data-info="{{boxes[7].boxid}}">{{boxes[7].initials}}</td>
           <td class="box" data-toggle="modal" data-target="#details" data-x="<%= @pool.x8 %>" data-y="<%= @pool.y0 %>" data-info="{{boxes[8].boxid}}">{{boxes[8].initials}}</td>
           <td class="box" data-toggle="modal" data-target="#details" data-x="<%= @pool.x9 %>" data-y="<%= @pool.y0 %>" data-info="{{boxes[9].boxid}}">{{boxes[9].initials}}</td>
+          <td rowspan="11" class="away-title"><h6 class="text-uppercase"><span style="color: #<%= @pool.awaycolor1 %>"><%= @pool.awaycity%></span> <span style="color: #<%= @pool.awaycolor2 %>"><%= @pool.awayteam %></span></h6></td>
         </tr>
         <tr>
           <td class="box-headers"><%= @pool.y1 %></td>
